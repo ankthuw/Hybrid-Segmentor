@@ -5,7 +5,7 @@ import os
 NUM_EPOCHS = 50
 DATASET_SIZE = {'train' : 4800, 'val' : 600, 'test' : 600}
 # dataset = "/kaggle/working/dataset/split_dataset_6000/"
-dataset = "kaggle/datasets/thblanh/crackvision6000"
+dataset = "/kaggle/input/crackvision6000/split_dataset_6000"
 
 LEARNING_RATE = 1e-4
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"

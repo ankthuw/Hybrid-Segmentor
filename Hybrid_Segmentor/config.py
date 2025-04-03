@@ -16,6 +16,7 @@ IMAGE_HEIGHT = 256
 IMAGE_WIDTH = 256
 PIN_MEMORY = True
 LOAD_MODEL = False
+save_last=False 
 
 TRAIN_IMG_DIR = dataset+"train/IMG"
 TRAIN_MASK_DIR = dataset+"train/GT"

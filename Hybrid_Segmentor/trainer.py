@@ -41,4 +41,11 @@ if __name__ == "__main__":
     trainer.validate(model, val_loader)
 
     # 7. Test
-    trainer.test(model, test_loader, ckpt_path="best")
+    # trainer.test(model, test_loader, ckpt_path="best")
+    import glob
+    ckpts = glob.glob("checkpoints/v7_BCEDICE0_2_final/*.ckpt")
+    ckpts.sort()
+    best_ckpt = ckpts[-1]
+
+    print("Loading best checkpoint:", best_ckpt)
+    trainer.test(model, test_loader, ckpt_path=best_ckpt)

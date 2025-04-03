@@ -13,10 +13,11 @@ class MyPrintingCallBack(Callback):
 
 checkpoint_callback = ModelCheckpoint(
     dirpath=os.path.join(os.getcwd(), 'checkpoints', 'v7_RECALL_2'),
-    filename='v7-epoch{epoch:02d}-val_loss{val_loss:.4f}',
+    # filename='v7-epoch{epoch:02d}-val_loss{val_loss:.4f}',
+    filename='best',
     verbose=True,
     save_last=True,
-    save_top_k=5,
+    save_top_k=1,
     monitor='val_loss',
     mode='min'
 )

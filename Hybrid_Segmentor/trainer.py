@@ -29,7 +29,7 @@ if __name__ == "__main__":
         logger=logger,
         accelerator="gpu" if torch.cuda.is_available() else "cpu",
         max_epochs=config.NUM_EPOCHS,
-        min_epochs=1,
+        # min_epochs=1,
         precision="16-mixed",
         callbacks=[checkpoint_callback, early_stopping, MyPrintingCallBack()]
     )
